@@ -50,7 +50,7 @@ python main.py --springs stvk --integrator backward-euler --k 80
 
 ## energy conservation
 
-The Average Vector Field (AVF) method can preserve energy, which avoids both explosions and energy dissipation. This repository contains an implementation of [AVF integration for StVK deformable models](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) (`--integrator avf4`).
+The Average Vector Field (AVF) method can preserve energy, which avoids both explosions and artificial damping. This repository contains an implementation of [AVF integration for StVK deformable models](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) (`--integrator avf4`).
 
 We can run the same StVK simulation that was unstable with symplectic Euler, now without explosions.
 
