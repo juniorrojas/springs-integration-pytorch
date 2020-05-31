@@ -2,7 +2,7 @@
 
 Numerical integration methods for mass-springs systems implemented in PyTorch.
 
-The main purpose of this repository is to show how automatic differentiation can be used to implement different numerical integration methods.
+The main purpose of this repository is to show how automatic differentiation can be used to implement different numerical integration methods. Read more [here](https://medium.com/@juniorrojas/numerical-integration-for-physics-based-simulation-via-backpropagation-on-energy-functions-b39c4d3a610).
 
 ![](media/integrators.gif)
 
