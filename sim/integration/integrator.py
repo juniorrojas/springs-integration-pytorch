@@ -6,7 +6,7 @@ from ..potentials import StVKSprings
 class Integrator(nn.Module):
     def __init__(self, x, m, h=0.033, dtype=torch.float32, x1=True):
         super().__init__()
-        num_vertices, d = x.size()
+        num_vertices, d = x.shape
         self.h = h
 
         self.register_buffer("x", x.detach().clone())
@@ -22,7 +22,7 @@ class Integrator(nn.Module):
         self.springs = None
 
     def set_springs(self, indices, l0, k, mode="hookean"):
-        num_vertices = self.x.size()[0]
+        num_vertices = self.x.shape[0]
         if mode == "hookean":
             potential = HookeanSprings(indices, l0, k, num_vertices)
         elif mode == "stvk":

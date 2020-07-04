@@ -41,7 +41,7 @@ l0 = torch.tensor([
     1.4
 ], dtype=dtype)
 
-num_vertices, d = x.size()
+num_vertices, d = x.shape
 num_springs = len(indices)
 
 # stiffness

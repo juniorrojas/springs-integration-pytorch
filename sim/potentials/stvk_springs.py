@@ -6,7 +6,7 @@ class StVKSprings(nn.Module):
     def __init__(self, indices, l0, k, num_vertices):
         super().__init__()
         self.indices = indices
-        assert l0.size()[0] == k.size()[0]
+        assert l0.shape[0] == k.shape[0]
         self.register_buffer("incidence", common.make_incidence(indices, num_vertices, dtype=l0.dtype))
         self.register_buffer("q0", l0.pow(2))
         self.register_buffer("k", k)
