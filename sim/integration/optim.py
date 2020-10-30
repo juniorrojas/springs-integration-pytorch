@@ -1,18 +1,18 @@
 import torch
 import torch.optim as optim
 
-def line_search(x, x_grad, descent_dir, loss, eval_loss,
+def line_search(x, descent_dir, loss, eval_loss,
                 max_line_search_iters, step_size_eps,
                 k=0.3):
     step_size = 1.0
-    x1 = x - x_grad * step_size
+    x1 = x + descent_dir * step_size
     loss1 = eval_loss(x1)
     iters = 0
     while loss1 >= loss and iters < max_line_search_iters:
         step_size *= k
         if step_size < step_size_eps:
             break
-        x1 = x - x_grad * step_size
+        x1 = x + descent_dir * step_size
         loss1 = eval_loss(x1)
         iters += 1
     return step_size
@@ -43,7 +43,7 @@ class GradientDescentWithLineSearch:
             descent_dir = -self.x.grad
             step_size = line_search(
                 self.x,
-                self.x.grad, descent_dir,
+                descent_dir,
                 loss=loss,
                 eval_loss=self.eval_loss,
                 max_line_search_iters=self.max_line_search_iters,
