@@ -6,7 +6,7 @@ The main purpose of this repository is to show how automatic differentiation can
 
 ![](media/integrators.gif)
 
-Tested with python 3.7 and pytorch 1.6.0
+Tested with python 3.7 and pytorch 1.6.0.
 
 ## quick start
 
