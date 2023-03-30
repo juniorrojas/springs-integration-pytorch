@@ -1,4 +1,4 @@
-## springs-integration-pytorch
+# springs-integration-pytorch
 
 Numerical integration methods for mass-springs systems implemented in PyTorch.
 
@@ -6,7 +6,7 @@ The main purpose of this repository is to show how automatic differentiation can
 
 ![](media/integrators.gif)
 
-Tested with python 3.7 and pytorch 1.6.0.
+Tested with python 3.7 and PyTorch 1.6.0.
 
 ## quick start
 
@@ -75,3 +75,29 @@ You can also improve the accuracy by running `python main.py --dtype double` (th
 ## optimizer implementation
 
 Both AVF integration and backward Euler require solving a minimization problem. This repository contains a basic implementation of gradient descent with line search (`sim/integration/optim.py`) to solve this minimization problem, but better methods exist, especially for larger systems. The main purpose of this repository is to show how automatic differentiation can be used for numerical integration. Developing better optimizers that take advantage of automatic differentiation for implicit numerical integration is encouraged as an option to improve the implementation provided in this repository.
+
+## citation
+
+This code was released as supplementary material for the paper [Deep reinforcement learning for 2D soft body locomotion](https://neurips2019creativity.github.io/doc/drlsbl-neurips-2019.pdf) to illustrate implementation details. If you find this work useful in your research, please consider citing this work as follows:
+
+```
+@conference{
+  rojas2019-drl-sbl,
+  title = {Deep reinforcement learning for 2{D} soft body locomotion},
+  author = {Junior Rojas and Stelian Coros and Ladislav Kavan},
+  booktitle = {NeurIPS Workshop on Machine Learning for Creativity and Design 3.0},
+  year = {2019}
+}
+```
+
+For the [AVF integrator](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) in particular, please consider citing this work as follows:
+
+```
+@article {
+  rojas2018-avf-stvk,
+  title = {Average Vector Field Integration for St. Venant-Kirchhoff Deformable Models},
+  author = {Junior Rojas and Tiantian Liu and Ladislav Kavan},
+  journal = {IEEE Transactions on Visualization and Computer Graphics},
+  year = {2018}
+}
+```
