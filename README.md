@@ -81,8 +81,7 @@ Both AVF integration and backward Euler require solving a minimization problem. 
 This code was released as supplementary material for the paper [Deep reinforcement learning for 2D soft body locomotion](https://neurips2019creativity.github.io/doc/drlsbl-neurips-2019.pdf) to illustrate implementation details. To cite this in your research, please use the following BibTeX entry:
 
 ```bibtex
-@conference{
-  rojas2019-drl-sbl,
+@conference{rojas2019-drl-sbl,
   title = {Deep reinforcement learning for 2{D} soft body locomotion},
   author = {Junior Rojas and Stelian Coros and Ladislav Kavan},
   booktitle = {NeurIPS Workshop on Machine Learning for Creativity and Design 3.0},
@@ -93,8 +92,7 @@ This code was released as supplementary material for the paper [Deep reinforceme
 For the [AVF integrator](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) in particular, please use the following BibTeX entry:
 
 ```bibtex
-@article {
-  rojas2018-avf-stvk,
+@article {rojas2018-avf-stvk,
   title = {Average Vector Field Integration for St. Venant-Kirchhoff Deformable Models},
   author = {Junior Rojas and Tiantian Liu and Ladislav Kavan},
   journal = {IEEE Transactions on Visualization and Computer Graphics},
