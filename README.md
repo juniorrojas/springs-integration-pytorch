@@ -90,7 +90,7 @@ This code was released as supplementary material for the paper [Deep reinforceme
 }
 ```
 
-For the [AVF integrator](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) in particular, please consider citing:
+For the [AVF integrator](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) in particular, please use the following BibTeX template:
 
 ```
 @article {
