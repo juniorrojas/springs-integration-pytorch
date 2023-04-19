@@ -92,7 +92,7 @@ This code was released as supplementary material for the paper [Deep reinforceme
 For the [AVF integrator](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) in particular, please use the following BibTeX entry:
 
 ```bibtex
-@article {rojas2018-avf-stvk,
+@article{rojas2018-avf-stvk,
   title = {Average Vector Field Integration for St. Venant-Kirchhoff Deformable Models},
   author = {Junior Rojas and Tiantian Liu and Ladislav Kavan},
   journal = {IEEE Transactions on Visualization and Computer Graphics},
