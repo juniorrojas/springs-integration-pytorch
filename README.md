@@ -20,9 +20,11 @@ python main.py --integrator backward-euler
 
 ## spring model and stiffness
 
-Two types of springs are available: Hookean springs and StVK springs (`--springs hookean | stvk`). You can also set the stiffness (`--k`).
+Two types of springs are available: Hookean springs and Saint Venant–Kirchhoff (StVK) springs (`--springs hookean | stvk`). You can also set the stiffness (`--k`).
 
-![](media/spring-potential.png)
+| Hookean springs | StVK springs |
+| -------------   | ------------- |
+| $$E(l) = \frac{k}{2} \|l - l_0\|^2$$ | $$E(l) = \frac{k}{2} \|l^2 - l_0^2\|^2 $$ |
 
 For example, we can run symplectic Euler with Hookean springs:
 
@@ -52,7 +54,7 @@ python main.py --springs stvk --integrator backward-euler --k 80
 
 ## energy conservation
 
-The Average Vector Field (AVF) method can preserve energy, which avoids both explosions and artificial damping. This repository contains an implementation of [AVF integration for StVK deformable models](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) (`--integrator avf4`).
+The Average Vector Field (AVF) method can preserve energy, which avoids both explosions and artificial damping. This repository contains an implementation of [AVF integration for StVK deformable models](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) (`--integrator avf4`), which can preserve energy in the particular case of quartic potential energy functions, such as StVK.
 
 We can run the same StVK simulation that was unstable with symplectic Euler, now without explosions.
 
