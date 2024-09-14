@@ -42,7 +42,7 @@ python main.py --springs stvk --integrator symplectic-euler --k 80
 
 ![](media/se-stvk.gif)
 
-Symplectic Euler is not very stable. Hamiltonian oscillations can become so large that the simulation eventually explodes.
+Symplectic Euler is not very stable. Hamiltonian (potential + kinetic energy) oscillations can become so large that the simulation eventually explodes.
 
 In contrast, backward Euler does not explode, but introduces artificial damping.
 
@@ -52,9 +52,9 @@ python main.py --springs stvk --integrator backward-euler --k 80
 
 ![](media/be-stvk.gif)
 
-## energy conservation
+## total energy (Hamiltonian) conservation
 
-The Average Vector Field (AVF) method can preserve energy, which avoids both explosions and artificial damping. This repository contains an implementation of [AVF integration for StVK deformable models](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) (`--integrator avf4`), which can preserve energy in the particular case of quartic potential energy functions, such as StVK.
+Under certain assumptions, the Average Vector Field (AVF) method can preserve the Hamiltonian (potential + kinetic energy) of the system, which avoids both explosions and artificial damping. This repository contains an implementation of [AVF integration for StVK deformable models](https://medium.com/@juniorrojas/average-vector-field-integration-for-st-venant-kirchhoff-deformable-models-1848787bf1dd) (`--integrator avf4`), which can preserve energy in the particular case of quartic potential energy functions, such as StVK.
 
 We can run the same StVK simulation that was unstable with symplectic Euler, now without explosions.
 
